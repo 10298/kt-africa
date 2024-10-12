@@ -82,3 +82,46 @@ buttons.forEach((btn, btnIndex) =>
     });
   })
 );
+// Internship
+const faqTitle = document.querySelectorAll(".faq-title");
+const faqAnswer = document.querySelectorAll(".faq-answer");
+const iconOption = document.querySelectorAll(".icon-option");
+const faqDiv = document.querySelectorAll(".faq-group");
+
+faqTitle.forEach((title, titleIndex) =>
+  title.addEventListener("click", () => {
+    faqAnswer.forEach((answer, answerIndex) => {
+      faqDiv.forEach((faq, faqIndex) => {
+        if (titleIndex === answerIndex && titleIndex === faqIndex) {
+          //   alert("true");
+
+          answer.classList.add("visible");
+          faq.classList.add("show-block");
+          iconOption.forEach((icon, iconIndex) => {
+            if (titleIndex === iconIndex) {
+              icon.textContent = "-";
+            } else {
+              icon.textContent = "+";
+            }
+          });
+
+          //   console.log(titleIndex, faqIndex);
+        } else if (titleIndex !== answerIndex && titleIndex !== faqIndex) {
+          //   alert("false");
+          faq.classList.remove("show-block");
+          answer.classList.remove("visible");
+        }
+      });
+    });
+  })
+);
+
+//Form
+
+function handleForm() {
+  window.location.href = "internForm.html";
+}
+//Back
+function handleBack() {
+  window.location.href = "internship.html";
+}

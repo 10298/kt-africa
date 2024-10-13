@@ -284,6 +284,10 @@ section{
     }
 }
 
+#contact-section {
+    padding: 150px;
+}
+
 #section1 .div2{
     padding-inline: 15px;
     flex-grow: 1;

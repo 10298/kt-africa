@@ -275,12 +275,6 @@ section {
   }
 }
 
-#section1 .div2 {
-  padding-inline: 15px;
-  flex-grow: 1;
-  display: flex;
-}
-
 #section1 .div1 h1 {
   font-family: poppins-extra-bold;
   font-size: 5em;

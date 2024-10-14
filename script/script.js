@@ -1,3 +1,11 @@
+/****** LOADER */
+
+const loader = document.querySelector('.loader')
+
+$(window).on('load',function(){
+  $('.loader').fadeOut(1000);
+})
+
 /***************************SECTION 5 TEAM SCROLL  */
 
 const team = document.querySelector("#section5 .images");
@@ -28,13 +36,21 @@ team.addEventListener("scroll", () => {
 
 /********************************************** SIDE BAR */
 
-$(".bars").click(function () {
+$(".more1").click(function () {
   $(".sidebar").toggleClass("open");
   $(".sidebar .fa-times-div").toggleClass("open");
   $(".sidebar .ul-sidebar").toggleClass("open");
   $(".sidebar .copywright").toggleClass("open");
   $(".full").toggleClass("open");
+  $(".sidebar .logo").toggleClass("open");
 });
+
+$('.brief-info>.fa-times').click(()=>{
+  $('.brief-info').removeClass('open');
+})
+$('.more2').click(()=>{
+  $('.brief-info').toggleClass('open');
+})
 
 $(".fa-times-div").click(function () {
   $(".sidebar").removeClass("open");
@@ -42,6 +58,7 @@ $(".fa-times-div").click(function () {
   $(".sidebar .ul-sidebar").removeClass("open");
   $(".sidebar .copywright").removeClass("open");
   $(".full").removeClass("open");
+  $(".sidebar .logo").removeClass("open");
 });
 
 $(".sidebar .ul-sidebar li a").click(() => {
@@ -57,6 +74,8 @@ $("section").click(function () {
   $(".sidebar .ul-sidebar").removeClass("open");
   $(".sidebar .copywright").removeClass("open");
   $(".full").removeClass("open");
+  $('.brief-info').removeClass('open');
+  $(".sidebar .logo").removeClass("open");
 });
 
 // Services

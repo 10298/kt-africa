@@ -20,17 +20,15 @@
   padding-top: 120px;
 }
 .active {
-  font-weight: bold;
   color: var(--original-orange) !important;
 }
 
 /* Hero section starts */
 #top-description {
   height: 300px;
-  background-image: url("/images/our-services-bg.jpg");
-  background-position: fixed;
+  background-image: url("images/our-services-bg.jpg");
+  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   color: var(--white);
   padding-left: 4rem;
   display: flex;

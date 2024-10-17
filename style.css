@@ -583,6 +583,10 @@ section {
   padding-bottom: 30px;
 }
 
+#section2 .div1{
+  padding-inline: 20px;
+}
+
 @media (max-width: 800px) {
   #section2 {
     display: block;
@@ -618,18 +622,57 @@ section {
   font-size: 0.9em;
 }
 
+#section2 .div2{
+  padding-inline: 25px;
+  position: relative;
+}
+
+#section2 .div2 .orange-wave{
+    position: absolute;
+    z-index: 1;
+    left: 20%;
+    transform: rotate(0deg);
+    border-radius: 46% 54% 40% 60% / 61% 70% 30% 39%;
+    width: 420px;
+    height: 420px;
+    background: var(--original-orange);
+    background: -webkit-linear-gradient(to right,
+        var(--original-orange),
+        #eea348);
+    background: linear-gradient(to right,
+    var(--original-orange),
+    #eea348);
+    animation: rotated 5s infinite linear;
+}
+
+@keyframes rotated{
+  to{
+    transform: rotate(360deg);
+  }
+}
+
 #section2 .div2 img {
-  height: 500px;
+  height: 440px;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 1100px) {
   #section2 .div2 img {
     height: 300px;
   }
+  #section2 .div2 .orange-wave {
+    height: 280px;
+    width: 280px;
+  }
 }
 
 @media (max-width: 800px) {
   #section2 .div2 img {
+    display: none;
+  }
+
+  #section2 .div2 .orange-wave {
     display: none;
   }
 }
@@ -675,9 +718,16 @@ section {
 /******************************************* SECTION 3 ****************************/
 
 #section3 {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.7) 50%
+  ),
+  url(assets/images/blue-bg.png);
+background-position: center;
+background-size: cover;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 95%;
   padding-block: 20px;
 }
 
@@ -687,10 +737,16 @@ section {
   }
 }
 
+#section3 .div1{
+  padding: 25px;
+}
+
 #section3 .div1 h2 {
   font-family: poppins-bold;
   font-size: 2em;
   margin-block: 10px;
+  padding-inline: 15px;
+  color: #fff;
 }
 
 #section3 .div1 .values {
@@ -712,23 +768,56 @@ section {
 }
 
 #section3 .div1 .values .text p {
-  color: var(--text-gray);
+  color: var(--text-grey);
   font-weight: 500;
   margin-top: 10px;
 }
 
+#section3 .div2{
+  position: relative;
+  padding: 20px;
+}
+
 #section3 .div2 img {
-  height: 500px;
+  height: 450px;
+  position: relative;
+  z-index: 2;
+}
+
+#section3 .div2 .blue-wave{
+  position: absolute;
+  z-index: 1;
+  left: 10%;
+  transform: rotate(0deg);
+  border-radius: 46% 54% 40% 60% / 61% 70% 30% 39%;
+  width: 400px;
+  height: 400px;
+  background: var(--original-orange);
+  background: -webkit-linear-gradient(to right,
+      var(--original-blue),
+      #358acc);
+  background: linear-gradient(to right,
+  var(--original-blue),
+  #358acc);
+  animation: rotated 5s infinite linear;
 }
 
 @media (max-width: 1100px) {
   #section3 .div2 img {
     height: 300px;
   }
+
+  #section3 .div2 .blue-wave {
+    height: 300px;
+    width: 300px;
+  }
 }
 
 @media (max-width: 800px) {
   #section3 .div2 img {
+    display: none;
+  }
+  #section3 .div2 .blue-wave {
     display: none;
   }
 }
@@ -847,6 +936,7 @@ section {
   background-size: cover;
   padding-block: 40px;
   background-attachment: fixed;
+  display: none;
 }
 
 #section5 .title {
@@ -1083,6 +1173,7 @@ footer .div1 button i {
   padding: 10px;
   border-radius: 100%;
   transform: rotate(-45deg);
+  cursor: pointer;
 }
 
 footer .div1 .follow {
@@ -1099,6 +1190,7 @@ footer .div1 .follow .line {
 
 footer .div1 .follow i {
   color: #fff;
+  cursor: pointer;
 }
 
 footer .div2 h2 {
